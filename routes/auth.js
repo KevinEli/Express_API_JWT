@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/User').schema;
 const bcrypt = require('bcrypt');
-const schemaRegister = require('../models/User').schemaRegister;
-const schemaLogin = require('../models/User').schemaLogin;
+const { schemaRegister, schemaLogin } = require('../models/User')
 const jwt = require('jsonwebtoken');
 
 router.post('/register', async(req, res) => {
